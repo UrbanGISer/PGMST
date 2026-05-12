@@ -2,7 +2,7 @@
 
 **P**hysics-informed **G**raph embedding + **M**ulti-objective **Minimum Spanning Tree** (MST-based) regionalization.
 
-Citaion: Lingbo Liu & Fahui Wang,(2026), Physics-informed graph learning for spatially contiguous and capacity-constrained hospital service area delineation, Computers, Environment and Urban Systems
+**Citation: Lingbo Liu & Fahui Wang,(2026), Physics-informed graph learning for spatially contiguous and capacity-constrained hospital service area delineation, Computers, Environment and Urban Systems**
 
 Two-stage API:
 
