@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pgmst"
+version = "0.2.0"
+description = "Physics-informed graph embedding (SGCN) and multi-objective MST zoning (PGNN + MST)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "PGMST contributors" }]
+keywords = [
+    "spatial",
+    "graph-neural-network",
+    "MST",
+    "community-detection",
+    "OD-matrix",
+    "zoning",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "geopandas>=0.14",
+    "libpysal>=4.8",
+    "networkx>=3.0",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "torch>=2.0",
+    "torch-geometric>=2.4",
+]
+
+[project.optional-dependencies]
+dev = ["hatch>=1.7", "twine>=5.0", "build>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/UrbanGISer/PGMST"
+Documentation = "https://github.com/UrbanGISer/PGMST#readme"
+Repository = "https://github.com/UrbanGISer/PGMST"
+Issues = "https://github.com/UrbanGISer/PGMST/issues"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/pgmst",
+    "/examples",
+    "/docs",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pgmst"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"examples/PGMST_Florida_demo.ipynb" = "pgmst/examples/PGMST_Florida_demo.ipynb"

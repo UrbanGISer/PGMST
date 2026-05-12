@@ -1,0 +1,8 @@
+geopandas>=0.14
+libpysal>=4.8
+networkx>=3.0
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+torch>=2.0
+torch-geometric>=2.4
