@@ -1,3 +1,5 @@
+<img width="925" height="330" alt="image" src="https://github.com/user-attachments/assets/f818779d-f295-493d-8aca-7c735f9f97c7" />
+
 # PGMST
 
 **P**hysics-informed **G**raph embedding + **M**ulti-objective **Minimum Spanning Tree** (MST-based) regionalization.
