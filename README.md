@@ -4,6 +4,15 @@
 
 **Citation: Lingbo Liu & Fahui Wang,(2026), Physics-informed graph learning for spatially contiguous and capacity-constrained hospital service area delineation, Computers, Environment and Urban Systems**
 
+<img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/9f59dd8a-9ad5-4de8-9353-92a7fe5798d2" />
+
+Figure 1. Workflow for constructing a physics-informed graph, learning SGCN embeddings, and trimming an embedding-weighted minimum spanning tree (MST) to obtain spatially contiguous hospital service areas (HSAs) under modularity, localization, and capacity controls. (1) Distance-Adjusted Flows, (2) Assign Glue Flows, (3) Combining Graphs & Normalization, (4) GNN Embedding, (5) Adjacent Graph with Embedding Feature, (6) MST Trimmed with Multi-Criteria. 
+
+
+<img width="972" height="944" alt="image" src="https://github.com/user-attachments/assets/c0d07f9e-ee51-4af7-b2e3-50fc463dfb28" />
+
+Figure 2. Visualization of GNN Embedding, MST and resulting HSAs. (a) Embedding displacement field, where green points denote original ZCTA centroids and red points denote the rescaled 2D embedded coordinates plotted in the same map bounding box. Curved lines indicate displacement from geographic position to embedded functional position. ZCTA boundaries are retained as a light geographic reference layer and are intentionally de-emphasized so that centroid displacements remain visible in dense metropolitan areas.  (b) The Minimum Spanning Tree (MST) backbone, where link thickness represents the strength of functional connectivity (inverse embedding distance). (c) The spatial distribution of the Localization Index (LI) for the final HSAs, indicating the degree of self-containment. (d) The total population of each delineated HSA. Darker blue regions represent major metropolitan areas where functional integrity was prioritized over maximum population thresholds.
+
 Two-stage API:
 
 1. **`pgmst.pgnn.PGNN`** — packaged **SGCN** pipeline (half-life OD weights + spatial glue on contiguity edges). `embed()` appends **`Emb_X` / `Emb_Y`** to your zone table.
